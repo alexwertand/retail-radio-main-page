@@ -2,6 +2,10 @@ html, body {
     font-family: "Roboto-Regular", sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+  }
+
 a {
     text-decoration: none;
 }
@@ -34,8 +38,8 @@ button {
     }
 }
 
-.full-height {
-    height: 100vh;
+.overflow-hidden {
+    overflow: hidden;
 }
 
 .d-inline-block {
@@ -44,6 +48,10 @@ button {
 
 .d-block {
     display: block;
+}
+
+.d-none {
+    display: none!important;
 }
 
 .d-flex {
@@ -84,6 +92,38 @@ button {
 
 .w-50 {
     width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.z-5 {
+    z-index: 5;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.z-15 {
+    z-index: 15;
 }
 
 /*#region margins*/
@@ -589,6 +629,8 @@ button {
         }
 
         .flow-text-box img {
+            width: 100%;
+            margin-right: 0px;
             order: 2;
         }
     }
@@ -848,5 +890,67 @@ button {
         font-size: 18px;
         line-height: 21px;
         color: #4A4A4A;
+    }
+
+    @media(max-width: 1199px) {
+        .section-9 {
+            display: none;
+        }
+    }
+/*#endregion*/
+
+/*#region mobile-menu*/
+    .mobile-menu {
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 27px 20px 50px 20px;
+        background-color: #FFFFFF;
+    }
+
+    .mobile-menu-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 30px;
+        color: #DE5E5E;
+    }
+
+    .mobile-menu-links a {
+        display: block;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #DE5E5E;
+    }
+
+    .mobile-menu-contacts a {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #4A4A4A;
+    }
+
+    .mobile-menu-social a + a {
+        margin-left: 15px;
+    }
+
+    .mobile-menu-language a + a {
+        margin-left: 40px;
+    }
+
+    .mobile-menu-language a {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: #DE5E5E;
+    }
+
+    @media(min-width: 1199px) {
+        .mobile-menu {
+            display: none!important;
+        }
     }
 /*#endregion*/
