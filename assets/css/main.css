@@ -275,7 +275,7 @@ button {
     }
 
     .nav-panel {
-        margin-bottom: 260px;
+        margin-bottom: 15vw;
     }
 
     .play-audio-box {
@@ -489,6 +489,26 @@ button {
     @media(min-width: 375px) and (max-width: 767px) {
         .info-box {
             margin-bottom: 20vw;
+        }
+    }
+
+    @media(max-width: 992px) and (orientation: landscape) {
+        .nav-panel,
+        .info-box {
+            margin-bottom: 0px;
+        }
+
+        .play-audio-box {
+            margin-bottom: 5vh;
+        }
+
+        .h1-box,
+        .additional-text {
+            margin-bottom: 3vh;
+        }
+
+        .scroll-more-box {
+            bottom: 1vh;
         }
     }
 /*#endregion*/
@@ -930,6 +950,7 @@ button {
         flex-direction: column;
         padding: 27px 20px 50px 20px;
         background-color: #FFFFFF;
+        overflow: auto;
     }
 
     .mobile-menu-title {
@@ -974,6 +995,13 @@ button {
     @media(min-width: 1199px) {
         .mobile-menu {
             display: none!important;
+        }
+    }
+
+    @media(max-width: 992px) and (orientation: landscape) {
+        .mobile-menu-contacts,
+        .mobile-menu-social {
+            margin-bottom: 5vh;
         }
     }
 /*#endregion*/
